@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="images/icons8-rupee-cute-outline-favicons/Web/icons8-rupee-cute-outline-96.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/login_style.css">
+    <script src="javascript/nav_top_sript.js"></script>
+    <script src="javascript/login_script.js"></script>
+    <script>
+        window.onload = function(){nav_top_toggle()};
+        window.onscroll = function(){nav_top_toggle()};
+        window.onload = function(){toggle_password()};
+    </script>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="h-div2">
+            <div class="h-div1">
+                <span class="h-span1">
+                    <a href="index.html">
+                        <img src="images/BorrowEaseLogo/BorrowEaseWhiteSimpleIcon.png" alt="" class="h-logo1">
+                    </a>
+                </span>
+                <a href="signup.html">
+                    <span class="h-span2">
+                        Signup
+                    </span>
+                </a>
+                <a href="login.html">
+                    <span class="h-span3">
+                        Login
+                    </span>
+                </a>
+                <a href="educational_resources.html">
+                    <span class="h-span4">
+                        <span>Educational Resources</span>
+                    </span>
+                </a>
+            </div>
+            <div>
+                <hr class="h-hr1" id="h-hr1">
+            </div>
+        </div>
+    </header>
+    <section class="section">
+        <div class="s-div3">
+            <p class="s-p3">User Instruction</p>
+            <p class="s-p4">&bull; Enter your username: Type in your username into the "<span class="s-span1">Username</span>" field. Your username should be provided by the website or application that you are trying to login to.</p>
+            <p class="s-p4">&bull; Enter your password: Type in your password into the "<span class="s-span1">Password</span>" field. Your password should be kept confidential and known only to you.</p>
+            <p class="s-p4">&bull; Show Password (Optional): If you would like to view the characters you are typing in the password field, you can check the "<span class="s-span1">Show Password</span>" box. This is helpful if you need to verify that you are typing the correct password.</p>
+            <p class="s-p4">&bull; Click on the "Login" button: Once you have entered your username and password, click on the "<span class="s-span1">Login</span>" button to submit your login credentials and gain access to the website or application.</p>
+            <p class="s-p4">&bull; Sign up for an account (Optional): If you do not have an account, click on the "<span class="s-span1">Signup</span>" link located below the login form to be redirected to the sign up page.</p>
+        </div>
+        <div class="s-div1">
+            <form method="post" action="">
+			    <p class="s-p1">Login</p>
+			    <label for="username" class="s-label1">Username:</label>
+                <br>
+			    <input type="text" id="username" name="username" required placeholder="Enter username or email id" class="s-input1">
+                <br>
+			    <label for="password" class="s-label1">Password:</label>
+                <br>
+			    <input type="password" id="password" name="password" required placeholder="Enter password" class="s-input1">
+                <br>
+				<input type="checkbox" id="show-password" name="show-password">
+                <label for="show-password" class="s-label2">Show Password</label>
+                <br>
+                <div class="s-div2">
+                    <button type="submit" class="s-btn1">Login</button>
+                </div>
+                <p class="s-p2">Not a user? <a href="signup.html" class="s-link1">Signup</a></p>
+		    </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="f-div7">
+            <div>
+                <hr class="f-hr1">
+            </div>
+            <div class="f-div1">
+                <div class="f-div2">
+                    <span class="f-span1">
+                        <a href="index.html">
+                            <img src="images/BorrowEaseLogo/BorrowEaseWhiteSimpleIcon.png" alt="" class="f-logo1">
+                        </a>
+                    </span>
+                </div>
+                <div class="f-div3">
+                    <div class="f-div5">
+                        <a href="loan_calculator.html">
+                            <span>Loan Calculator</span>
+                        </a>
+                    </div>
+                    <div class="f-div5">
+                        <a href="government_schemes.html">
+                            <span>Government Schemes</span>
+                        </a>
+                    </div>
+                    <div class="f-div5">
+                        <a href="educational_resources.html">
+                            <span>Educational Resources</span>
+                        </a>
+                    </div>
+                    <div class="f-div5">
+                        <a href="about_us.html">
+                            <span>About Us</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="f-div4">
+                    <span>
+                        <img src="images/footer-g20-Logo-removebg-preview.png" alt="" class="f-img1">
+                    </span>
+                </div>
+                <hr class="f-hr2">
+                <div class="f-div6">
+                    <span class="f-span3">
+                        <a href="https://www.facebook.com/people/Borrowease-Loan/pfbid0P3siZve2SCkwJBMbNZmRFrMt2p6HgeY3oHnoXArpzD8KXCMrPh3HBUGsJXcUWkc7l/" target="_blank">
+                            <img src="images/icons8-facebook-ios-16-glyph/icons8-facebook-30.png" alt="" class="f-img2">
+                        </a>
+                    </span>
+                    <span class="f-span3">
+                        <a href="https://www.instagram.com/borrowease_" target="_blank">
+                            <img src="images/icons8-instagram-ios-16-favicons/Web/icons8-instagram-ios-16-32.png" alt="" class="f-img2">
+                        </a>
+                    </span>
+                    <span class="f-span3">
+                        <a href="https://twitter.com/borrowease" target="_blank">
+                            <img src="images/icons8-twitter-ios-16-filled/icons8-twitter-50.png" alt="" class="f-img2">
+                        </a>
+                    </span>
+                    <span class="f-span2">&#169;BorrowEase</span>
+                </div>
+            </div>
+            <a href="#">
+                <span class="nav-top" id="nav_top">&#8892;</span>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

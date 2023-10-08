@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="shortcut icon" href="images/icons8-rupee-cute-outline-favicons/Web/icons8-rupee-cute-outline-96.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/loan_calculator_style.css">
+    <script src="javascript/nav_top_sript.js"></script>
+    <script src="javascript/loan_calculator_script.js"></script>
+    <script>
+        window.onload = function(){nav_top_toggle()};
+        window.onscroll = function(){nav_top_toggle()};
+    </script>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="h-div2">
+            <div class="h-div1">
+                <span class="h-span1">
+                    <a href="index.html">
+                        <img src="images/BorrowEaseLogo/BorrowEaseWhiteSimpleIcon.png" alt="" class="h-logo1">
+                    </a>
+                </span>
+                <a href="signup.html">
+                    <span class="h-span2">
+                        Signup
+                    </span>
+                </a>
+                <a href="login.html">
+                    <span class="h-span3">
+                        Login
+                    </span>
+                </a>
+                <a href="educational_resources.html">
+                    <span class="h-span4">
+                        <span>Educational Resources</span>
+                    </span>
+                </a>
+            </div>
+            <div>
+                <hr class="h-hr1" id="h-hr1">
+            </div>
+        </div>
+    </header>
+    <section class="section">
+        <div class="s-div5">
+            <p class="s-p4">User Instruction</p>
+            <p class="s-p5">&bull; Enter the loan amount you wish to borrow in INR (Indian Rupees) in the "<span class="s-span1">Loan Amount</span>" field.</p>
+            <p class="s-p5">&bull; Set the interest rate percentage using the range slider or by manually entering the value in the "<span class="s-span1">Interest Rate</span>" field.</p>
+            <p class="s-p5">&bull; Set the loan term in years using the range slider or by manually entering the value in the "<span class="s-span1">Loan Term</span>" field.</p>
+            <p class="s-p5">&bull; Select the payment frequency from the dropdown list provided.</p>
+            <p class="s-p5">&bull; Click on the "<span class="s-span1">Calculate</span>" button to see the loan summary.</p>
+            <p class="s-p5">&bull; The loan summary will display the payment frequency, number of payments, loan amount, and monthly payment details.</p>
+            <p class="s-p5"><span class="s-span1">Note</span>: The user can adjust the loan amount, interest rate, loan term, and payment frequency as many times as they want before clicking the "<span class="s-span1">Calculate</span>" button to get the updated loan summary.</p>
+        </div>
+        <div class="s-div1">
+            <p class="s-p1">Loan Calculator</p>
+            <form onsubmit="event.preventDefault(); calculateLoan();" id="">
+                <div class="s-div2">
+                    <label class="s-label1">Loan Amount (INR):</label>
+                    <input type="number" id="loanAmount" placeholder="Enter loan amount(₹)" class="s-input1">
+                </div>
+                <div class="s-div2">
+                    <label class="s-label1">Interest Rate (%):</label>
+                    <input type="range" min="0.1" max="20" step="0.1" id="interestRate" class="s-input3" placeholder="Enter interest rate" oninput="document.getElementById('interestRateValue').value = this.value; document.getElementById('interestRate').value = this.value;">
+                    <input type="number" id="interestRateValue" class="s-input2" max="20" placeholder="Enter interest rate(%)" oninput="document.getElementById('interestRate').value = this.value;" onchange="if(this.value > 20) {this.value = 20;}">
+                </div>
+                <div class="s-div2">
+                    <label class="s-label1">Loan Term (Years):</label>
+                    <input type="range" min="1" max="30" step="1" id="loanTermSlider" class="s-input3" placeholder="Enter loan term in years" oninput="document.getElementById('loanTerm').value = this.value; document.getElementById('loanTermSliderValue').value = this.value;">
+                    <input type="number" id="loanTerm" class="s-input2" max="30" oninput="document.getElementById('loanTermSlider').value = this.value;" onchange="if(this.value > 30) {this.value = 30;} else if(this.value < 1) {this.value = 1;} document.getElementById('loanTermSlider').value = this.value;">
+                </div>
+                <div class="s-div2">
+                    <label class="s-label1">Payment Frequency:</label>
+                    <select id="paymentFrequency" class="s-input1">
+                        <option value="1">Annually</option>
+                        <option value="2">Semi-Annually</option>
+                        <option value="4">Quarterly</option>
+                        <option value="12" selected>Monthly</option>
+                        <option value="24">Semi-Monthly</option>
+                        <option value="26">Biweekly</option>
+                        <option value="52">Weekly</option>
+                        <option value="365">Daily</option>
+                    </select>
+                </div>
+                <div class="s-div3">
+                    <button type="submit" onclick="calculateLoan(); summary_visible();" class="s-btn1">Calculate</button>
+                </div>
+            </form>
+            <div class="s-div4" id="summary">
+              <p class="s-p3">Loan Summary:</p>
+              <p class="s-p2">Payment Frequency: <span id="paymentFrequencyResult"></span></p>
+              <p class="s-p2">Number of Payments: <span id="numberOfPayments"></span></p>
+              <p class="s-p2">Loan Payment: <span id="loanPayment"></span></p>
+              <p class="s-p2">Total Interest Paid: <span id="totalInterestPaid"></span></p>
+              <p class="s-p2">Total Payment: <span id="totalPayment"></span></p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="f-div7">
+            <div>
+                <hr class="f-hr1">
+            </div>
+            <div class="f-div1">
+                <div class="f-div2">
+                    <span class="f-span1">
+                        <a href="index.html">
+                            <img src="images/BorrowEaseLogo/BorrowEaseWhiteSimpleIcon.png" alt="" class="f-logo1">
+                        </a>
+                    </span>
+                </div>
+                <div class="f-div3">
+                    <div class="f-div5">
+                        <a href="loan_calculator.html">
+                            <span>Loan Calculator</span>
+                        </a>
+                    </div>
+                    <div class="f-div5">
+                        <a href="government_schemes.html">
+                            <span>Government Schemes</span>
+                        </a>
+                    </div>
+                    <div class="f-div5">
+                        <a href="educational_resources.html">
+                            <span>Educational Resources</span>
+                        </a>
+                    </div>
+                    <div class="f-div5">
+                        <a href="about_us.html">
+                            <span>About Us</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="f-div4">
+                    <span>
+                        <img src="images/footer-g20-Logo-removebg-preview.png" alt="" class="f-img1">
+                    </span>
+                </div>
+                <hr class="f-hr2">
+                <div class="f-div6">
+                    <span class="f-span3">
+                        <a href="https://www.facebook.com/people/Borrowease-Loan/pfbid0P3siZve2SCkwJBMbNZmRFrMt2p6HgeY3oHnoXArpzD8KXCMrPh3HBUGsJXcUWkc7l/" target="_blank">
+                            <img src="images/icons8-facebook-ios-16-glyph/icons8-facebook-30.png" alt="" class="f-img2">
+                        </a>
+                    </span>
+                    <span class="f-span3">
+                        <a href="https://www.instagram.com/borrowease_" target="_blank">
+                            <img src="images/icons8-instagram-ios-16-favicons/Web/icons8-instagram-ios-16-32.png" alt="" class="f-img2">
+                        </a>
+                    </span>
+                    <span class="f-span3">
+                        <a href="https://twitter.com/borrowease" target="_blank">
+                            <img src="images/icons8-twitter-ios-16-filled/icons8-twitter-50.png" alt="" class="f-img2">
+                        </a>
+                    </span>
+                    <span class="f-span2">&#169;BorrowEase</span>
+                </div>
+            </div>
+            <a href="#">
+                <span class="nav-top" id="nav_top">&#8892;</span>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

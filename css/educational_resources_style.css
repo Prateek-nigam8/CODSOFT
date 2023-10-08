@@ -1,0 +1,94 @@
+/*############## Section ##############*/
+
+.s-div1{
+    display: grid;
+    grid-auto-flow: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 800px){
+    .s-div1{
+        grid-auto-flow: unset;
+    }
+}
+
+.s-div6{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.s-div2{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.s-img1{
+    width: 100%;
+}
+
+.s-p1{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.s-hr1{
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    height: 1px;
+    background-color: #18bf55;
+}
+
+.s-p2{
+    font-size: 20px;
+}
+
+.s-div3{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
+}
+
+.s-p3{
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.s-hr2{
+    width: 50px;
+    border: none;
+    height: 2px;
+    background-color: #18bf55;
+}
+
+.s-div5{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.s-p4{
+    font-size: 16px;
+}
+
+.s-hr3{
+    border: 0;
+    height: 1px;
+    background-color: lightgray;
+}
+
+.s-div4{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 100px;
+}
+
+.s-p5{
+    font-size: 18px;
+    color: blue;
+    text-decoration: underline;
+}

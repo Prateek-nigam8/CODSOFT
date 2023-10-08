@@ -1,0 +1,261 @@
+/*############## Section ##############*/
+
+.s-div2{
+    margin-bottom: 80px;
+}
+
+.s-div3{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.s-p1{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.s-hr1{
+    width: 30px;
+    border: none;
+    height: 5px;
+    background-color: #18bf55;
+}
+
+.s-div4{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 50px;
+}
+
+.s-div5{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.s-img1{
+    width: 70px;
+}
+
+.s-p2{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.s-div6{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(240, 240, 240);
+}
+
+@media screen and (max-width: 620px){
+    .s-div6{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.s-div7{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.s-p3{
+    font-size: 17px;
+}
+
+.s-p4{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.s-div8{
+    height: 110px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.s-span2{
+    float: left;
+}
+
+.s-span3{
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+
+.s-span4{
+    color: lightgray;
+    margin-left: 5px;
+}
+
+.s-p5{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.s-p6{
+    font-size: 17px;
+    margin-left: 30px;
+}
+
+.s-div10{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.s-p7{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.s-p8{
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.s-div11{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.s-span5{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #18bf55;
+    border-radius: 10px;
+    color: white;
+}
+
+.s-span5:hover{
+    background-color: #11863c;
+}
+
+.s-span6{
+    color: #21d663;
+    line-height: 45px;
+}
+
+.s-span7{
+    color: #ff7332;
+    font-size: 30px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.s-span8{
+    color: #0400ff;
+    font-size: 30px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.s-span9{
+    color: #08a75a;
+    font-size: 30px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.s-div12{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.s-div13{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.s-p9{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.s-div15{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+}
+
+@media screen and (max-width: 620px){
+    .s-div15{
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+.s-div14{
+    width: 90%;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 620px){
+    .s-div14{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0;
+    }
+    .s-p10{
+        padding-left: 10px;
+    }
+    .s-p11{
+        padding-right: 10px;
+    }
+}
+
+.s-p10{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    width: 45%;
+    float: left;
+}
+
+.s-p11{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 17px;
+    width: 45%;
+    float: right;
+    color: rgb(95, 95, 95);
+}

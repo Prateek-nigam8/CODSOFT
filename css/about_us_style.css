@@ -1,0 +1,21 @@
+h2 {
+    margin: 0;
+    font-size: 40px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.s-div1 {
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 620px){
+    .s-div1{
+        width: 94vw;
+    }
+}
